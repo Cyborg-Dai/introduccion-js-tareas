@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CLASE 5 - TAREA 1</title>
+</head>
+<body>
+    <h1>CALCULADOR SALARIO</h1>
+    <main>
+      <form id="formulario">
+        <label for="salarioAnual">Indique su salario anual:</label> <!--Label es simplemente para ponerle un etiqueta a un formulario-->
+        <input type="number" id="salarioAnual" placeholder="Ej.: 300000" required/> <!-- El required lo uso para eviar hacer mas codigo en js, por ej me devuelva un error al envíar un campo vacío. Con esto impido que el form se envíe si el campo esa vacío  -->
+        <button type="button" id="botonResultado">Calcular</button> 
+        <button type="reset">Limpiar</button> <br>
+
+       
+        <label for="salarioMensual">Salario mensual:</label>
+        <input type="text" id="salarioMensual" disabled/> <!--Acá deshabilito cualquier modificación--> 
+      </form>
+    </main>
+<script type="text/javascript" src="tarea-clase-5.js"></script>
+</body>
+</html>
