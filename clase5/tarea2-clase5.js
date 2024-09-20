@@ -1,8 +1,6 @@
 //TAREA: En otro archivo html (no Index) y otro archivo js (no tarea-clase-5.js),
 // creá un formulario que capture el primer nombre, segundo nombre, apellido/s y edad del usuario
-// también vamos a crear un <h1> que diga Bienvenido!
-
-
+// también vamos a crear un <h1> que diga Bienvenido
 // vas a crear un botón de acción que una vez que lo apretás, va a
 // mostrar toda la información junta en un campo de texto
 // Y va a cambiar el <h1> para decir "Bienvenido, nombreDeUsuario"!
@@ -21,18 +19,11 @@ const $edadUsuario = document.querySelector('#edadUsuario').value;
 const $informacion = document.querySelector('#informacion');
 $informacion.value = (`Nombres: ${$primerNombreUsuario} ${$segundoNombreUsuario}, Apellido: ${$apellidoUsuario}, Edad: ${edadUsuario} `);
 
-document.querySelector('h1').innerText = `Bienvenido ${$primerNombreUsuario}}`;
+document.querySelector('h1').innerText = `Bienvenido, ${$primerNombreUsuario}}`;
  
 }
 
-///document.addEventListener('DOMContentLoaded', function() {
-///const $botonEnviar = document.querySelector('#botonEnviar');
 
-/*
-Acceso a los valores: Utiliza .value para obtener el texto de los campos de entrada.
-Formato del texto: Usa la interpolación de cadenas para combinar los valores en un mensaje.
-Actualización del <h1>: Incluye el primer nombre del usuario en el mensaje de bienvenida
-*/
 
 
 

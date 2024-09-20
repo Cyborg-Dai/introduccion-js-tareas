@@ -5,32 +5,67 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="main-mio.css"/>
+    <link rel="stylesheet" href="tarea6.css"/>
     <title>Tarea 6</title>
 </head>
 <body>
 
+<h2>Tarea 1 y 2 - Clase 6</h2>
+
 <form id="calculador-edades">
-    <label for="cantidad-integrantes">Ingrese la cantidad de integrantes</label>
-    <input type="number" id="cantidad-integrantes"/>
-    <button type="submit" id="siguiente-paso">Siguiente</button>
+    <fieldset>
+        <legend> <strong> CALCULADOR DE EDADES</strong> </legend>
+            <label for="cantidad-integrantes">Ingrese la cantidad de integrantes</label>
+            <input type="number" id="cantidad-integrantes"/>
+            <button type="button" id="siguiente-paso">Siguiente</button>
 
     <div id="integrantes">
-      
+
     </div>
+        <button type="button" id="calcular-edad" class="oculto">Calcular</button>
+        <br>
+        <button type="button" id="resetear-campos" class="oculto">Resetear</button>
+        <br>
 
-    <button type="button" id="calcular" class="oculto">Calcular</button>
-
-    <div id="analisis" class="oculto">
-        <p>La edad mayor es: <strong id="mayor-edad"></  strong></p>
+    <div id="analisis-edad" class="oculto">
+        <p><strong>RESULTADOS:</strong></p>
+        <p>La edad mayor es: <strong id="mayor-edad"></strong></p>
         <p>La menor edad es: <strong id="menor-edad"></strong></p>
         <p>El promedio de edad es: <strong id="promedio-edad"></strong></p>
+        <button type="reset" id="resetear">Resetear</button>
+        
+    </div>
+        <br>
+        <button type="button" id="segundo-paso"class="oculto">Siguiente</button>
+    </fieldset>
+</form>
+<br>
+<br>
+
+<form id="calculador-salario"></form>
+    <fieldset id="salarios-integrantes" class="oculto">
+        <legend> <strong> CALCULADOR DE SALARIOS</strong> </legend>
+        <label for="cantidad-salarios">¿Cuántos integrantes trabajan?</label>
+        <input type="number" id="cantidad-salarios"/> 
+        <button type="button" id="habilitar-campos">OK</button>
+
+    <div id="salarios">
+      
+    </div>
+    <br>
+    <button type="button" id="calcular-salario" class="oculto">Calcular</button>
+
+    <div id="analisis-salario" class="oculto">
+        <p>El salario más alto es: <strong id="mayor-salario"></strong></p>
+        <p>El salario más bajo es: <strong id="menor-salario"></strong></p>
+        <p>El salario promedio es: <strong id="promedio-salario"></strong></p>
+        <button type="reset" id="resetear-salario">Resetear</button>
     </div>
 
-    <button type="reset" id="resetear">Resetear</button>
+    </fieldset>
 </form>
-<script type="text/javascript" src="nivel1.js"></script>
-<script type="text/javascript" src="calculos-mio.js"></script>
-<script type="text/javascript" src="tarea-clase-6-mio.js"></script>
+
+<script type="text/javascript" src="tarea1-clase6.js"></script>
+<script type="text/javascript" src="tarea2-clase6.js"></script>
 </body>
 </html>

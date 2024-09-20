@@ -18,11 +18,12 @@ const $resultadoNumeroPequenio = document.querySelector("#resultadoNumeroPequeni
 const $resultadoNumeroGrande = document.querySelector("#resultadoNumeroGrande");
 const $resultadoNumeroFrecuente = document.querySelector("#resultadoNumeroFrecuente");
 
+
 $botonCalcular.onclick = function () {
-    let resultadoPromedio = calcularPromedio(arrayNumeros);
-    let numeroMinimo = calcularNumeroMasPequenio(arrayNumeros);
-    let numeroMaximo = calcularNumeroMasGrande(arrayNumeros);
-    let numeroMasVecesRepetido = calcularNumeroMasRepetido(arrayNumeros);
+    const resultadoPromedio = calcularPromedio(arrayNumeros);
+    const numeroMinimo = calcularNumeroMasPequenio(arrayNumeros);
+    const numeroMaximo = calcularNumeroMasGrande(arrayNumeros);
+    const numeroMasVecesRepetido = calcularNumeroMasRepetido(arrayNumeros);
 
     $resultadoPromedio.textContent = `El promedio es: ${resultadoPromedio}`;
     $resultadoNumeroPequenio.textContent = `El número más pequeño es: ${numeroMinimo}`;
