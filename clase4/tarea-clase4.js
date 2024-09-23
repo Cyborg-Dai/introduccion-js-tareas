@@ -72,21 +72,19 @@ fizzBuzz();
 //parámetro es un placeholder, es im ñugar reservado y se puede llamar de cualquier manera
 // argumento son los datos que reeplazan al parametro 
 
-let notasParciales = [10, 5, 4, 2, 8];
-let promedio = calcularPromedio(notasParciales);
+const NOTAS_PARCIALES = [10, 5, 4, 2, 8];
 
-function calcularPromedio(notasParciales) {
-    if (notasParciales.length === 0) {
+function calcularPromedio(numeros) {
+    if (numeros.length === 0) {
         return 0;
     }
     let sumaTotal = 0;
-    for (let i = 0; i < notasParciales.length; i++) {
-        sumaTotal += notasParciales[i]; 
+    for (let i = 0; i < numeros.length; i++) {
+        sumaTotal += numeros[i]; 
     }
-    return sumaTotal / notasParciales.length;
+    return sumaTotal / numeros.length;
 }
 
-console.log(`El promedio es ${promedio}`);
-
+console.log("El promedio es " + calcularPromedio(NOTAS_PARCIALES));
 
 

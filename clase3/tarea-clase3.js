@@ -33,7 +33,7 @@ if (MI_NOMBRE === NOMBRE_DEL_USUARIO){
 
 const MI_EDAD = 27;
 
-function preguntarEdad(){
+function preguntarEdad() {
 const EDAD_DEL_USUARIO = Number(prompt('¿Cuál es tu edad?'));
 
 if (isNaN(EDAD_DEL_USUARIO)) {
@@ -94,6 +94,73 @@ preguntarDniEnLaEntrada();
 
 //El else if debe preceder a un if o else if, no puede estar solo.
 //El else no lleva una condición. En su lugar, usa else if si necesitas más condiciones.
+///////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////
+//CON LA CORRECCIÓN QUE ME HICIERON, QUEDARÍA ASÍ:
+
+function preguntarNombreUsuario() {
+    const MI_NOMBRE = "daiana";
+    const NOMBRE_NOVIO = "kevin";
+    const NOMBRE_DEL_USUARIO = (prompt('¿Cuál es tu nombre?') || "").toLowerCase();
+  
+    if (MI_NOMBRE === NOMBRE_DEL_USUARIO) {
+      console.log(`¡Hola, Tocayo! Yo también me llamo ${NOMBRE_DEL_USUARIO}`);
+    } else if (NOMBRE_NOVIO === NOMBRE_DEL_USUARIO) {
+      console.log(`Hola ${NOMBRE_DEL_USUARIO}, te llamas igual que mi novio`);
+    } else if (NOMBRE_DEL_USUARIO.trim() === '') {
+      console.log('No ingresaste ningún nombre. Volvé a intentar');
+      preguntarNombreUsuario();
+    } else {
+      console.log(`¡Hola, ${NOMBRE_DEL_USUARIO}!`);
+    }
+  }
+  
+  function preguntarEdad() {
+    const MI_EDAD = 27;
+    const EDAD_DEL_USUARIO = Number(prompt('¿Cuál es tu edad?'));
+  
+    if (isNaN(EDAD_DEL_USUARIO)) {
+      console.log("No entendí la respuesta. Probá con un número válido");
+      preguntarEdad();
+    } else if (EDAD_DEL_USUARIO === MI_EDAD) {
+      console.log('Tenés mi misma edad');
+    } else if (EDAD_DEL_USUARIO > MI_EDAD) {
+      console.log("Sos mayor que yo");
+    } else {
+      console.log("Sos menor que yo");
+    }
+  }
+  
+  function preguntarDniEnLaEntrada() {
+    const EDAD_MINIMA_PARA_ENTRAR = 18;
+    const RESPUESTA_SI = "si";
+    const RESPUESTA_NO = "no";
+    const usuarioTieneDocumento = (prompt("¿Tenés documento?") || '').toLowerCase();
+  
+    if (usuarioTieneDocumento === RESPUESTA_SI) {
+      const edadUsuario = Number(prompt('¿Cuántos años tenes?'));
+  
+      if (isNaN(edadUsuario)) {
+        console.log("La edad ingresada no es un número válido. Por favor, intentá de nuevo.");
+        preguntarDniEnLaEntrada();
+      } else if (edadUsuario >= EDAD_MINIMA_PARA_ENTRAR) {
+        console.log("Bienvenido al bar");
+      } else if (edadUsuario < EDAD_MINIMA_PARA_ENTRAR) {
+        console.log("No podes entrar al bar.");
+      }
+    } else if (usuarioTieneDocumento === RESPUESTA_NO) {
+      console.log("Se necesita documento para pasar al bar.");
+    } else {
+      console.log("No entendí la respuesta. Por favor, intentá de nuevo");
+      preguntarDniEnLaEntrada();
+    }
+  }
+  
+
+  preguntarNombreUsuario();
+  preguntarEdad();
+  preguntarDniEnLaEntrada();
+  
 
 
 

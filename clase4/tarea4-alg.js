@@ -86,7 +86,7 @@ Desafío de programación #5: Calcula el resultado de la suma de los numeros del
 function sumaDelUnoAlDiez() {
 const array = [1,2,3,4,5,6,7,8,9,10]
 let suma = 0;
-for(let i=0; i <= array.legth; i++){ 
+for(let i=0; i <= array.length; i++){ 
  suma += array[i];
  }
  return suma;
@@ -103,9 +103,9 @@ sumaDelUnoAlDiez();
 
 function calcularDiezFactorial() {
 const array = [10,9,8,7,6,5,4,3,2,1]
-let multiplicación;
-for(let i=0; i < array.lenght; i++){
-  multiplicación += array[i]
+let multiplicación = 1;
+for(let i=0; i < array.length; i++){
+  multiplicación *= array[i]
   }
   return multiplicación;
 }
@@ -129,7 +129,7 @@ calcularNumerosImpares();
 function celsiusAFahrenheit(celsius) {
     return (celsius * 9/5) + 32;
 }
-celsiusAFahrenheit(celsius);
+celsiusAFahrenheit(25);
 
 
 ///////////////////////////////////////////////////////////////////////////////////////
@@ -138,7 +138,7 @@ celsiusAFahrenheit(celsius);
 function fahrenheitACelsius(fahrenheit) {
     return (fahrenheit - 32) * 5/9;
 }
-fahrenheitACelsius(fahrenheit)
+fahrenheitACelsius(25)
 
 
 /////////////////////////////////////////////////////////////////////////////////////////
@@ -250,7 +250,7 @@ console.log(`El número de Fibonacci en el índice ${n} es: ${resultadoFibonacci
 //////////////////////////////////////////////////////////////////////////////////////////////// 
 //Desafío de programación #16: Crear una función que dado un número retorne un Boolean (true/false) dependiendo si es primo o no.
 
-function retornarPrimo(numero) {
+function returnPrimo(numero) {
   if (numero <= 1) {  
     return false;     
   }
@@ -272,7 +272,19 @@ Ejemplo:
    2 = 2
    1234 = 1 + 2 + 3 + 4 = 10
 */
+function sumarDigitos(numero) {
+  let suma = 0;
+  const numeroArray = numero.toString();  
+  for (let i = 0; i < numeroArray.length; i++) {
+    suma += parseInt(numeroArray[i], 10);  
+  }
+  return suma;
+}
+console.log(sumarDigitos(123));
+console.log(sumarDigitos(1234));
 
+//////////////////////////////////////////////////////////////////////////////////////////////
+//Desafío de programación #18: Imprimir los primeros 100 números primos
 function esPrimo(numero) {
   if (numero <= 1) return false; 
 
@@ -336,7 +348,7 @@ function nPrimosMayoresQue(alComienzo, n) {
   return primos; 
 }
 
-console.log(nPrimosMayoresQue(5, 5)); 
+console.log(nPrimosMayoresQue(5, 4)); 
 console.log(nPrimosMayoresQue(10, 4)); 
 
 

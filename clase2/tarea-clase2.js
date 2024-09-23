@@ -29,7 +29,7 @@ function restar(numero1, numero2) {
 }
 
 const operadorUsuario = prompt('Ingrese un operador que quiera utilizar "+" ó "-" ');
-const numero1= Number(prompt("Ingrese un número"));
+const numero1 = Number(prompt("Ingrese un número"));
 const numero2 = Number(prompt("Ingrese otro número")); 
 
 
@@ -48,7 +48,6 @@ if (operadorUsuario === '+') {
 realizarCalculo(numero1, numero2, operadorUsuario);
 
 
-//https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/template_strings
 
 
 

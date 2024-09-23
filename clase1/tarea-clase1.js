@@ -7,17 +7,17 @@
 
 
 //CALCULAR EDAD
-let anioActual = Number(prompt("¿Que año es?"));
-let anioNacimiento = Number(prompt("¿En qué año naciste?"));
+const anioActual = Number(prompt("¿Que año es?"));
+const anioNacimiento = Number(prompt("¿En qué año naciste?"));
 
 function calcularEdadUsuario(anioActual, anioNacimiento) {
      return anioActual - anioNacimiento;
        
 }
-let edadUsuario = calcularEdadUsuario(anioActual, anioNacimiento); 
+const edadUsuario = calcularEdadUsuario(anioActual, anioNacimiento); 
 console.log("Tu edad es " + edadUsuario + " años");
 
-
+//////////////////////////////////////////////////////////////////
 
 //Preguntar el salario anual y calcular el salario mensual
 //Preguntar el salario menmsual y calcular el anual 
@@ -73,13 +73,15 @@ console.log("Tu salario por hora es " + salarioPorHora);
 
 //parseInt PARA PASAR AL NUMERO ENTERO 
 
+//////////////////////////////////////////////////////////////////
+//VISTO EN CLASES//
+//////////////////////////////////////////////////////////////////
 
 pruebaHoisting(); //funciona!
 function pruebaHoisting(){
-    console.log('prueba');
+    console.log('prueba');
 }
 //pruebaHoisting();
-*/
 
 
 var a = 1; //global
@@ -109,7 +111,7 @@ function prueba(c) { //c es un parámetro de la función prueba. LOCAL.
     console.log('d dentro de la funcion pero fuera del if, vale: ' + d); // 4
     console.log('e dentro de la funcion pero fuera del if, vale: ' + e); // 5
     // console.log('f dentro de la funcion pero fuera del if, vale: ' + f); // error
-}
+
 
 prueba(3);
 
