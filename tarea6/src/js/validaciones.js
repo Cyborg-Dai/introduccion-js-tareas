@@ -13,7 +13,7 @@ function validarIntegrantes(integrante){
 
     function validarCalcularSalario(integrante){
 
-        if(integrante.lenght === 0){
+        if(integrante.lenght === 0) {
             return 'Este campo debe tener al menos 1 caracter'
          }
         if(nombre.leght >= 3) {

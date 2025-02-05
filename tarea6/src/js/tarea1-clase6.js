@@ -17,7 +17,7 @@ Punto bonus: si hay inputs vacíos, ignorarlos en el cálculo (no contarlos como
 */
 
 document.querySelector('#siguiente-paso').onclick = function(event) {
-    const $cantidadIntegrantes = document.querySelector('#cantidad-integrantes');// l- Acá a ese id se lo asigno a una const con el mismo nombre. Esa id es un input type number
+    const $cantidadIntegrantes = document.querySelector('#numero-integrantes');// l- Acá a ese id se lo asigno a una const con el mismo nombre. Esa id es un input type number
     const cantidadIntegrantes = Number($cantidadIntegrantes.value); // Acá guardo el valor que se le asigne a cant de integrantes. Si ingreso 5 esto vale 5, si ingreso 10, vale 10 y así
     
     borrarResultadosSalarios();
